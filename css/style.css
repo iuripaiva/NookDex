@@ -124,7 +124,7 @@ main{
     border-radius: 3em;
     border: 3px solid var(--black);
     width: 19rem;
-    left:19.3rem;
+    margin-left:-1rem;
     box-shadow: 4px 4px 5px #aaa79a;
 }
 

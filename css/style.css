@@ -98,7 +98,7 @@ main{
     position: static;
     display: flex;
     background-color: var(--green);
-    transform: translate(17%, 0);
+    transform: translate(0, 0);
     border-radius: 45% 0 40% 0;
     width: 4rem;
     height: 4rem;
@@ -109,7 +109,7 @@ main{
     display: flex;
     border-radius: 10%;
     margin: auto;
-    margin-left: -3.3rem;
+    margin-left: -4rem;
     width: 20.3em;
     height: 20.3em;
 }
@@ -124,7 +124,7 @@ main{
     border-radius: 3em;
     border: 3px solid var(--black);
     width: 19rem;
-    margin-left:-1rem;
+    margin-left:-1.3rem;
     box-shadow: 4px 4px 5px #aaa79a;
 }
 

@@ -14,16 +14,16 @@
 
 @font-face {
     font-family: 'Nook1';
-    src: url(fonts/FOT-Seurat.otf);
+    src: url(/fonts/FOT-Seurat.otf);
 }
 
 @font-face {
     font-family: 'Nook2';
-    src: url(fonts/FOT-Bokutoh.otf);
+    src: url(/fonts/FOT-Bokutoh.otf);
 }
 
 body{
-    background: url(img/bg.webp);
+    background: url(/img/bg.webp);
     font-family: 'Nook1';
     color: var(--black);
     padding: 1rem;

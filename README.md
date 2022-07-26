@@ -8,6 +8,6 @@ Application developed using ACNH API
 
 ## Disclaimer:
 
-NookZon is a fan made website and claims no ownership of any intellectual property associated with Nintendo or Animal Crossing. All assets found on the site and the repository are the sole property of Nintendo and are only used for non-commercial and educational purpose.
+NookDex is a fan made website and claims no ownership of any intellectual property associated with Nintendo or Animal Crossing. All assets found on the site and the repository are the sole property of Nintendo and are only used for non-commercial and educational purpose.
 
 API used in this project: http://acnhapi.com

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+    <link rel="icon" href="img/nookedexlogo.webp">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script defer src="js/script.js"></script>
+
+    <title>NookDex</title>
+</head>
+<body>
+    <main>
+        <div id="Page1">
+            <img src="img/nookedexlogo.webp" alt="nookdex logo" class="nookdex__logo">
+            <div class="title">
+                <span class="title1">Nook</span><span class="title2">Dex</span>
+            </div>
+            <h2>Type a ID or villager name.</h2>
+            <form class="form">
+                <input type="text" class="input__search" placeholder="ID or Name" required>
+            </form>
+            <div class="button__area">
+
+                <button
+                    class="button button__search" 
+                    onclick="isNaN(input.value) || input.value != '' && input.value <= 391 && input.value >= 1 ? renderVillager(input.value) && show('Page2','Page1') : alert('You must fill the text field with a valid ID or villager name.')"
+                    name="Search Button">
+                    <img id="lupa" src="img/lupa icon.png" alt="">
+                </button>
+
+                <button 
+                    class="button button__search" 
+                    onclick="return renderVillager(input.value = Math.floor(Math.random() * 100)) && show('Page2','Page1');" 
+                    name="Random Villager Button">
+                    <img id="random" src="img/random icon.png" alt="Random Villager Button">
+                </button>
+
+                <div class="button__titles">
+                    <span>Search</span> <span>Random</span>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="Page2" style="display:none">
+            <div class="title">
+                <span class="title1">Nook</span><span class="title2">Dex</span>
+            </div>
+            <h1 class="villager__data">
+                #<span class="villager__id"></span> - 
+                <span class="villager__name"></span>
+            </h1>
+
+            <div class="images">
+                <img src="#" loading="lazy" alt="villager miniature" class="villager__icon">
+                <img src="#" loading="lazy" alt="villager photo" class="villager__image">
+            </div>
+
+            <div class="villager__saying" id="villager__text"></div>
+            <div class="villager__infos">
+                <span>Personality: </span><span class="villager__personality"></span>
+                <br>
+                <span>Hobby: </span><span class="villager__hobby"></span>
+                <br>
+                <span>Birthday: </span><span class="villager__birthday"></span>
+            </div>
+
+            <div class="button__area">
+
+                <button
+                    class="button button__search" 
+                    onclick="isNaN(input.value) || input.value != '' ? renderVillager(input.value) && show('Page1','Page2') : alert('You must fill the text field with a valid ID or villager name.')"
+                    name="Search Button">
+                    <img id="lupa" src="img/home icon.png" alt="">
+                </button>
+
+                <button 
+                    class="button button__search" 
+                    onclick="return renderVillager(input.value = Math.floor(Math.random() * 391));" 
+                    name="Random Villager Button">
+                    <img id="random" src="img/random icon.png" alt="Random Villager Button">
+                </button>
+
+                <div class="button__titles">
+                    <span>Home</span> <span>Random</span>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer>Made with &#10084;&#65039; by <a href="https://github.com/iuripaiva" target="_blank">Iuri Paiva</a></footer>
+</body>
+
+</html>

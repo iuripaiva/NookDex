@@ -120,10 +120,11 @@ main{
     position: absolute;
     margin-top: 1.3rem;
     padding: .3rem;
-	background: #bfbfbf;
-	border-radius: 3em;
+    background: #bfbfbf;
+    border-radius: 3em;
     border: 3px solid var(--black);
-    width: 17.5rem;
+    width: 19rem;
+    left:19.3rem;
     box-shadow: 4px 4px 5px #aaa79a;
 }
 

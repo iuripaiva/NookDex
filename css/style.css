@@ -13,18 +13,18 @@
 }
 
 @font-face {
-    font-family: 'Nook1', sans-serif;
+    font-family: 'Nook1';
     src: url(/fonts/FOT-Seurat.otf);
 }
 
 @font-face {
-    font-family: 'Nook2', sans-serif;
+    font-family: 'Nook2';
     src: url(/fonts/FOT-Bokutoh.otf);
 }
 
 body{
     background: url(/img/bg.webp);
-    font-family: 'Nook1';
+    font-family: 'Nook1', sans-serif;
     color: var(--black);
     padding: 1rem;
 }
@@ -65,7 +65,7 @@ main{
 }
 
 .title2{
-    font-family: 'Nook2';
+    font-family: 'Nook2', sans-serif;;
     color: var(--green);
 }
 
@@ -80,7 +80,7 @@ main{
     border-radius: 5px;
     height: 4vh;
     width: 15rem;
-    font-family: 'Nook2';
+    font-family: 'Nook2', sans-serif;;
     color: var(--white);
     background-color: var(--black);
 }
@@ -115,7 +115,7 @@ main{
 }
 
 .villager__saying{
-    font-family: 'Nook2';
+    font-family: 'Nook2', sans-serif;;
     font-size: 100%;
     position: absolute;
     margin-top: 1.3rem;

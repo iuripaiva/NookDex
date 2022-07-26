@@ -45,7 +45,11 @@ const renderVillager = async function() {
     villagerSaying.innerHTML = data.saying;
     document.getElementById("villager__text").style.color = data['text-color'];
     document.getElementById("villager__text").style.backgroundColor = data['bubble-color'];
-    villagerPersonality.innerHTML = data.personality;
+        if (data.personality == "Uchi"){
+        villagerPersonality.innerHTML = "Sisterly";
+    }else{
+        villagerPersonality.innerHTML = data.personality;
+    }
     villagerHobby.innerHTML = data.hobby;
     villagerBirthday.innerHTML = data['birthday-string'];
 

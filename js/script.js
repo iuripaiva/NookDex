@@ -6,6 +6,7 @@ function show(shown, hidden) {
 
 const villagerId = document.querySelector('.villager__id');
 const villagerName = document.querySelector('.villager__name');
+const villagerNameTag = document.querySelector('.villager__nametag');
 const villagerIcon = document.querySelector('.villager__icon');
 const villagerPhoto = document.querySelector('.villager__image');
 const villagerSaying = document.querySelector('.villager__saying');
@@ -40,12 +41,13 @@ const renderVillager = async function() {
 
     villagerId.innerHTML = data.id;
     villagerName.innerHTML = data['name']['name-USen'];
+    villagerNameTag.innerHTML = data['name']['name-USen'];
     villagerIcon.src = data.icon_uri;
     villagerPhoto.src = data.image_uri;
     villagerSaying.innerHTML = data.saying;
     document.getElementById("villager__text").style.color = data['text-color'];
     document.getElementById("villager__text").style.backgroundColor = data['bubble-color'];
-        if (data.personality == "Uchi"){
+    if (data.personality == "Uchi"){
         villagerPersonality.innerHTML = "Sisterly";
     }else{
         villagerPersonality.innerHTML = data.personality;

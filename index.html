@@ -1,104 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Links -->
-    <link rel="icon" href="/img/nookedexlogo.webp">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/nookedexlogo.webp" />
+    <link rel="stylesheet" href="/css/style.css" />
 
     <!-- JavaScript -->
     <script defer src="/js/script.js"></script>
 
     <title>NookDex</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div id="Page1">
-            <img src="img/nookedexlogo.webp" alt="nookdex logo" class="nookdex__logo">
-            <div class="title">
-                <span class="title1">Nook</span><span class="title2">Dex</span>
-            </div>
-            <h2>Type a ID or villager name.</h2>
-            <form class="form">
-                <input type="text" class="input__search" placeholder="ID or Name" required>
-            </form>
-            <div class="button__area">
-
-                <button
-                    class="button button__search" 
-                    onclick="isNaN(input.value) || input.value != '' && input.value <= 391 && input.value >= 1 ? renderVillager(input.value) && show('Page2','Page1') : alert('You must fill the text field with a valid ID or villager name.')"
-                    name="Search Button">
-                    <img id="lupa" src="img/lupa icon.png" alt="">
-                </button>
-
-                <button 
-                    class="button button__search" 
-                    onclick="return renderVillager(input.value = Math.floor(Math.random() * 100)) && show('Page2','Page1');" 
-                    name="Random Villager Button">
-                    <img id="random" src="img/random icon.png" alt="Random Villager Button">
-                </button>
-
-                <div class="button__titles">
-                    <span>Search</span> <span>Random</span>
-                </div>
-
-            </div>
-
+      <div id="Page1">
+        <img
+          src="img/nookedexlogo.webp"
+          alt="nookdex logo"
+          class="nookdex__logo"
+        />
+        <div class="title">
+          <span class="title1">Nook</span><span class="title2">Dex</span>
         </div>
-        <div id="Page2" style="display:none">
-            <div class="title">
-                <span class="title1">Nook</span><span class="title2">Dex</span>
-            </div>
-            <h1 class="villager__data">
-                #<span class="villager__id"></span> - 
-                <span class="villager__name"></span>
-            </h1>
+        <h2>Type a ID or villager name.</h2>
+        <form class="form">
+          <input
+            type="text"
+            class="input__search"
+            placeholder="ID or Name"
+            required
+          />
+        </form>
+        <div class="button__area">
+          <button
+            class="button button__search"
+            onclick="isNaN(input.value) || input.value != '' && input.value <= 391 && input.value >= 1 ? renderVillager(input.value) && show('Page2','Page1') : alert('You must fill the text field with a valid ID or villager name.')"
+            name="Search Button"
+          >
+            <img id="lupa" src="img/lupa icon.png" alt="" />
+          </button>
 
-            <div class="images">
-                <img src="#" loading="lazy" alt="villager miniature" class="villager__icon">
-                <img src="#" loading="lazy" alt="villager photo" class="villager__image">
-            </div>
-            <div class="villager__nametag" id="villager__text"></div>
-            <div class="villager__saying"></div>
+          <button
+            class="button button__search"
+            onclick="return renderVillager(input.value = Math.floor(Math.random() * 100)) && show('Page2','Page1');"
+            name="Random Villager Button"
+          >
+            <img
+              id="random"
+              src="img/random icon.png"
+              alt="Random Villager Button"
+            />
+          </button>
 
-            <svg viewBox="109.766 219.176 280.468 98.477" xmlns="http://www.w3.org/2000/svg" id="balloon">
-                <path d="M 194.321 189.597 C 212.384 189.242 232.453 190.225 251.134 190.221 C 269.481 190.217 287.329 189.285 305.432 189.597 C 323.543 189.909 345.875 189.462 359.774 192.094 C 370.006 194.031 378.025 197.413 383.615 200.833 C 387.754 203.364 390.155 206.579 392.159 209.26 C 393.778 211.424 394.747 216.99 395.401 219.871 C 396.347 224.03 396.255 229.799 393.173 236.102 C 389.293 244.037 381.483 246.461 379.753 254.828 C 378.947 258.727 381.983 262.183 381.279 266.686 C 380.534 271.451 379.592 275.446 374.919 278.859 C 369.008 283.177 357.727 284.401 346.924 285.726 C 334.038 287.306 320.262 285.99 301.99 286.35 C 277.94 286.824 239.136 287.454 212.708 285.102 C 190.117 283.092 169.517 282.493 156.46 280.108 C 148.729 278.696 140.787 277.53 136.415 275.114 C 132.45 272.923 128.661 270.672 126.623 266.687 C 124.246 262.042 124.157 262.73 124.49 257.949 C 124.733 254.471 129.744 250.438 127.412 243.592 C 125.445 237.815 118.206 235.748 116.523 228.61 C 115.29 223.381 115.007 219.908 116.341 215.502 C 117.871 210.452 121.737 204.074 126.429 200.208 C 131.368 196.137 137.103 193.919 145.667 192.094 C 157.664 189.536 177.329 189.931 194.321 189.597 Z" style="fill: rgb(248, 244, 220); fill-rule: nonzero; stroke-opacity: 0.23; stroke-width: 2px;" transform="matrix(1, 0, 0, 1, -5.695427, 29.656128)"/>
-                <path style="fill: rgb(255, 187, 0);" d="M 253.673 287.875 C 253.298 287.754 252.883 287.48 252.63 287.238 C 252.312 286.931 251.945 286.548 251.651 286.265 C 251.111 285.745 250.724 285.172 250.261 284.594 C 249.838 284.067 249.379 283.382 249.123 282.924 C 248.824 282.386 249.101 281.245 249.439 280.919 C 249.708 280.661 249.913 280.372 250.419 280.372 C 250.5 280.372 251.188 280.352 251.367 280.402 C 251.611 280.47 252.057 280.519 252.252 280.706 C 252.37 280.821 252.643 281.001 252.788 281.071 C 253.376 281.354 253.814 281.496 254.685 281.496 C 255.098 281.496 255.971 281.324 256.232 281.071 C 256.37 280.94 256.694 281.028 256.83 280.896 C 256.869 280.859 257.1 280.88 257.147 280.835 C 257.331 280.658 257.784 280.739 257.968 280.562 C 258 280.531 258.656 280.474 258.706 280.474 C 258.922 280.474 259.182 280.533 259.307 280.654 C 259.463 280.803 259.552 280.891 259.735 281.067 C 259.82 281.148 259.969 281.453 260.054 281.534 C 260.117 281.595 260.088 281.769 260.152 281.83 C 260.214 281.891 260.119 282.203 260.119 282.316 C 260.119 282.731 260.065 282.998 259.898 283.319 C 259.734 283.636 259.411 284.121 259.14 284.382 C 258.542 284.957 258.02 285.429 257.276 286.144 C 256.817 286.585 256.643 286.691 256.265 287.055 C 256.15 287.165 255.769 287.44 255.664 287.541 C 255.388 287.806 255.148 287.997 254.748 287.997 C 254.641 287.997 254.167 287.996 254.274 287.996 C 254.327 287.996 253.726 287.875 253.673 287.875 Z" transform="matrix(1, 0, 0, 1, -5.695427, 29.656128)"/>
-            </svg>
-            <div class="villager__infos">
-                <span>Personality: </span><span class="villager__personality"></span>
-                <br>
-                <span>Hobby: </span><span class="villager__hobby"></span>
-                <br>
-                <span>Birthday: </span><span class="villager__birthday"></span>
-            </div>
-
-            <div class="button__area">
-
-                <button
-                    class="button button__search" 
-                    onclick="isNaN(input.value) || input.value != '' ? renderVillager(input.value) && show('Page1','Page2') : alert('You must fill the text field with a valid ID or villager name.')"
-                    name="Search Button">
-                    <img id="lupa" src="img/home icon.png" alt="">
-                </button>
-
-                <button 
-                    class="button button__search" 
-                    onclick="return renderVillager(input.value = Math.floor(Math.random() * 391));" 
-                    name="Random Villager Button">
-                    <img id="random" src="img/random icon.png" alt="Random Villager Button">
-                </button>
-
-                <div class="button__titles">
-                    <span>Home</span> <span>  Random</span>
-                </div>
-
-            </div>
+          <div class="button__titles">
+            <span>Search</span> <span>Random</span>
+          </div>
         </div>
+      </div>
+      <div id="Page2" style="display: none">
+        <div class="title">
+          <span class="title1">Nook</span><span class="title2">Dex</span>
+        </div>
+        <h1 class="villager__data">
+          #<span class="villager__id"></span> -
+          <span class="villager__name"></span>
+        </h1>
+
+        <div class="images">
+          <img
+            src="#"
+            loading="lazy"
+            alt="villager miniature"
+            class="villager__icon"
+          />
+          <img
+            src="#"
+            loading="lazy"
+            alt="villager photo"
+            class="villager__image"
+          />
+        </div>
+        <div class="villager__nametag" id="villager__text"></div>
+        <div class="villager__saying"></div>
+
+        <img src="/img/txt-balloon.svg" id="balloon" alt="Text Baloon" />
+
+        <div class="villager__infos">
+          <span>Personality: </span><span class="villager__personality"></span>
+          <br />
+          <span>Hobby: </span><span class="villager__hobby"></span>
+          <br />
+          <span>Birthday: </span><span class="villager__birthday"></span>
+        </div>
+
+        <div class="button__area">
+          <button
+            class="button button__search"
+            onclick="isNaN(input.value) || input.value != '' ? renderVillager(input.value) && show('Page1','Page2') : alert('You must fill the text field with a valid ID or villager name.')"
+            name="Search Button"
+          >
+            <img id="lupa" src="img/home icon.png" alt="" />
+          </button>
+
+          <button
+            class="button button__search"
+            onclick="return renderVillager(input.value = Math.floor(Math.random() * 391));"
+            name="Random Villager Button"
+          >
+            <img
+              id="random"
+              src="img/random icon.png"
+              alt="Random Villager Button"
+            />
+          </button>
+
+          <div class="button__titles">
+            <span>Home</span> <span> Random</span>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer>Made with &#10084;&#65039; by <a href="https://github.com/iuripaiva" target="_blank">Iuri Paiva</a></footer>
-</body>
-
+    <footer>
+      Made with &#10084;&#65039; by
+      <a href="https://github.com/iuripaiva" target="_blank">Iuri Paiva</a>
+    </footer>
+  </body>
 </html>

@@ -39,45 +39,53 @@ const fetchVillager = async () => {
   }
 };
 
-const renderVillager = async function () {
+const renderVillager = async () => {
   const data = await fetchVillager();
 
-  villagerId.innerHTML = data.id;
-  villagerName.innerHTML = data["name"]["name-USen"];
-  villagerNameTag.innerHTML = data["name"]["name-USen"];
-  villagerIcon.src = data.icon_uri;
-  villagerPhoto.src = data.image_uri;
-  villagerSaying.innerHTML = data.saying;
-  document.getElementById("villager__text").style.color = data["text-color"];
-  document.getElementById("villager__text").style.backgroundColor =
-    data["bubble-color"];
-  if (data.personality == "Uchi") {
-    villagerPersonality.innerHTML = "Sisterly";
-  } else {
-    villagerPersonality.innerHTML = data.personality;
+  if (data === undefined) {
+    alert(
+      "Villager not found. You must fill the text field with a valid villager name or ID."
+    );
+    show("Page1", "Page2");
+    input.value = "";
   }
-  villagerHobby.innerHTML = data.hobby;
-  villagerBirthday.innerHTML = data["birthday-string"];
+
+  if ((isNaN(input.value) && input.value.toUpperCase() == data["name"]["name-USen"].toUpperCase()) || input.value == data.id){
+    villagerId.innerHTML = data.id;
+    villagerName.innerHTML = data["name"]["name-USen"];
+    villagerNameTag.innerHTML = data["name"]["name-USen"];
+    villagerIcon.src = data.icon_uri;
+    villagerPhoto.src = data.image_uri;
+    villagerSaying.innerHTML = data.saying;
+    document.getElementById("villager__text").style.color = data["text-color"];
+    document.getElementById("villager__text").style.backgroundColor =
+      data["bubble-color"];
+    if (data.personality == "Uchi") {
+      villagerPersonality.innerHTML = "Sisterly";
+    } else {
+      villagerPersonality.innerHTML = data.personality;
+    }
+    villagerHobby.innerHTML = data.hobby;
+    villagerBirthday.innerHTML = data["birthday-string"];
+    show("Page2", "Page1");
+    input.value = "";
+  } else if (isNaN(input.value) && input.value == data.id) {
+    alert(
+      "Villager not found.. You must fill the text field with a valid villager name or ID."
+    );
+    show("Page1", "Page2");
+    input.value = "";
+  }
 };
 
-input.onkeypress = function (event) {
+input.addEventListener("keypress", (event) => {
   if (event.keyCode == 13) {
     event.preventDefault();
     renderVillager(input.value);
-    if (
-      isNaN(input.value) ||
-      (input.value != "" && input.value <= 391 && input.value >= 1)
-    ) {
-      return show("Page2", "Page1");
-    } else {
-      alert("You must fill the text field with a valid ID or villager name.");
-    }
   }
-};
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   renderVillager(input.value);
-  input.value = "";
-  return show("Page2", "Page1");
 });

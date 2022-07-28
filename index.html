@@ -36,7 +36,7 @@
         <div class="button__area">
           <button
             class="button button__search"
-            onclick="isNaN(input.value) || input.value != '' && input.value <= 391 && input.value >= 1 ? renderVillager(input.value) && show('Page2','Page1') : alert('You must fill the text field with a valid ID or villager name.')"
+            onclick="renderVillager(input.value)"
             name="Search Button"
           >
             <img id="lupa" src="img/lupa icon.png" alt="" />
@@ -98,8 +98,8 @@
         <div class="button__area">
           <button
             class="button button__search"
-            onclick="isNaN(input.value) || input.value != '' ? renderVillager(input.value) && show('Page1','Page2') : alert('You must fill the text field with a valid ID or villager name.')"
-            name="Search Button"
+            onclick="show('Page1','Page2')"
+            name="Home Button"
           >
             <img id="lupa" src="img/home icon.png" alt="" />
           </button>

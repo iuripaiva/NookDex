@@ -9,6 +9,7 @@ Application developed using ACNH API
 <p align="center">
   <img src="screenshot1.png" width="500" title="Home Screen" alt="Home Screen">
   <img src="screenshot2.png" width="500" title="Villager Screen" alt="Villager Screen">
+  <img src="NookDex.gif" width="700" title="NookDex Usage Demonstration" alt="NookDex Usage Demonstration">
 </p>
 
 ## Disclaimer:
